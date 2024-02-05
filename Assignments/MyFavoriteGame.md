@@ -1,5 +1,5 @@
 # My Favorite Game
-My favorite game is *Super Mario Galaxy*, originally released for the Nintendo Wii in 2007. The storyline, soundtrack, and gameplay are unmatched in my opinion. I ma also a fan of the game's pioneering use of spherical/planetary gravity.
+My favorite game is *Super Mario Galaxy*, originally released for the Nintendo Wii in 2007. The storyline, soundtrack, and gameplay are unmatched in my opinion. I am also a fan of the game's pioneering use of spherical/planetary gravity.
 
 It was released by [Nintendo](https://www.nintendo.com/us/) on November 1st, 2007. It was implemented using the custom Super Mario Galaxy Engine, designed specifically for the game.
 

@@ -3,7 +3,11 @@ guid: 989ed37f42d1c40d7b535ccf5ff45ec8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _wallCollision: {fileID: 8300000, guid: 27fcbb5b993ab4045bb22f82b43b35fb, type: 3}
+  - _paddleCollision: {fileID: 8300000, guid: 587ba5ef9e64249b3a4df7f8de1138cf, type: 3}
+  - _brickCollision: {fileID: 8300000, guid: 3958cfa5727134097a70720190c0fab1, type: 3}
+  - _losePoint: {fileID: 8300000, guid: df4f3ff5d283846ca976716867a0c8a9, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -18,6 +18,6 @@ public class PlayerTankMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(x, 0, z).normalized;
-        tr.Translate(movement*speed*Time.deltaTime);
+        tr.Translate(speed * Time.deltaTime * movement);
     }
 }

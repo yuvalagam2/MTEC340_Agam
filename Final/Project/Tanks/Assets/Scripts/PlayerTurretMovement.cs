@@ -41,7 +41,7 @@ public class PlayerTurretMovement : MonoBehaviour
 
             GameObject bullet = Instantiate(
                 bulletPrefab,
-                GameObject.Find("Cylinder (1)").transform.position,
+                transform.Find("Cylinder (1)").transform.position,
                 transform.rotation);
             yield return new WaitForSeconds(waitInterval);
             isShooting = false;

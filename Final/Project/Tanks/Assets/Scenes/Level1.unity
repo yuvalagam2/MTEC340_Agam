@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 111963452}
   - component: {fileID: 111963451}
   - component: {fileID: 111963450}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,6 +237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3864884584508392481, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: layersToHit.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5629360661494537635, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
       propertyPath: m_Name
       value: EnemyTank
@@ -295,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414264322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,6 +325,63 @@ Transform:
   - {fileID: 1703154216}
   m_Father: {fileID: 1263598520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &586790431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5629360661494537635, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_Name
+      value: EnemyTank (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6085639
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.20960163
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9777869
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 204.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +488,7 @@ GameObject:
   - component: {fileID: 835112151}
   - component: {fileID: 835112150}
   - component: {fileID: 835112149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallB
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -529,7 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263598520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +626,7 @@ GameObject:
   - component: {fileID: 1703154219}
   - component: {fileID: 1703154218}
   - component: {fileID: 1703154217}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallR
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -658,6 +719,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703154215}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1779208274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5629360661494537635, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_Name
+      value: EnemyTank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2160847
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8873053
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4611826
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 54.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004780617667550719, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16f92a2a9ed944c4890df39e9599c12e, type: 3}
 --- !u!1 &1839350200
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +788,7 @@ GameObject:
   - component: {fileID: 1839350204}
   - component: {fileID: 1839350203}
   - component: {fileID: 1839350202}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallF
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -775,7 +893,7 @@ GameObject:
   - component: {fileID: 2106002843}
   - component: {fileID: 2106002842}
   - component: {fileID: 2106002841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -920,38 +1038,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTank
       objectReference: {fileID: 0}
-    - target: {fileID: 2840665576524484067, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 6600700848401226306, guid: 79df0935fa3e44e75a3eee58abe43aef, type: 3}
-    - target: {fileID: 2840665576524484067, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: shootButton
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2840665576524484067, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 6600700848401226306, guid: 79df0935fa3e44e75a3eee58abe43aef, type: 3}
-    - target: {fileID: 2840665576524484067, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: shootingInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3613070963951738294, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5f4e161a9b9584c43b7c4167211b559f, type: 2}
-    - target: {fileID: 5040106167890791038, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: m_TagString
-      value: PlayerTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581048336413515815, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581048336413515815, guid: c538d0290011d4dbcaeb39a65c977761, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -965,3 +1051,5 @@ SceneRoots:
   - {fileID: 1263598520}
   - {fileID: 9166725830634465513}
   - {fileID: 332641060}
+  - {fileID: 1779208274}
+  - {fileID: 586790431}

@@ -9,6 +9,12 @@ public class PlayerTurretMovement : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] KeyCode shootButton;
     bool isShooting = false;
+    Transform mouth;
+
+    void Start()
+    {
+        mouth = transform.Find("Cylinder (1)");
+    }
     
     void Update()
     {
@@ -41,7 +47,7 @@ public class PlayerTurretMovement : MonoBehaviour
 
             GameObject bullet = Instantiate(
                 bulletPrefab,
-                transform.Find("Cylinder (1)").transform.position,
+                mouth.position,
                 transform.rotation);
             yield return new WaitForSeconds(waitInterval);
             isShooting = false;

@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class PlayerTankMovement : MonoBehaviour
 {
-    Transform tr;
+
     [SerializeField] float speed = 5f;
-    
+    Rigidbody rb;
 
     void Start()
     {
-        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -18,6 +17,7 @@ public class PlayerTankMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(x, 0, z).normalized;
-        tr.Translate(speed * Time.deltaTime * movement);
+        Vector3 worldMovement = transform.TransformDirection(movement);
+        rb.velocity = speed * worldMovement;
     }
 }

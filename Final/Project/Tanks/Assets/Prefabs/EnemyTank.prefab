@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4873242875827500457}
   - component: {fileID: 1341488354934820701}
   - component: {fileID: 7546179390677369199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6843540591504644297}
   - component: {fileID: 5075132020338398685}
   - component: {fileID: 8902083580890537457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 5491950609625906171}
   - component: {fileID: 6345661841434597131}
   - component: {fileID: 372648773072759656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,8 @@ GameObject:
   - component: {fileID: 9004780617667550719}
   - component: {fileID: 3864884584508392481}
   - component: {fileID: 6726679849434826671}
-  m_Layer: 0
+  - component: {fileID: 6372949123899260857}
+  m_Layer: 6
   m_Name: EnemyTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +370,9 @@ MonoBehaviour:
   cruiseSpeed: 5
   pursueSpeed: 10
   rotSpeed: 75
+  pursueRotSpeed: 135
   wallDistance: 10
+  stopDistance: 8
 --- !u!54 &6726679849434826671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,11 +395,32 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!135 &6372949123899260857
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629360661494537635}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 16
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6176310240765315324
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6964661482783010421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +467,7 @@ GameObject:
   - component: {fileID: 1548461597440798483}
   - component: {fileID: 5076190466508472791}
   - component: {fileID: 6672937765150775165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

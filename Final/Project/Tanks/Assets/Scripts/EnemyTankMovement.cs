@@ -3,18 +3,15 @@ using UnityEngine;
 
 public class EnemyTankMovement : MonoBehaviour
 {
-    EnemyState state = EnemyState.Patrol;
+    public EnemyState state = EnemyState.Patrol;
     EnemyMoveState moveState = EnemyMoveState.Cruise;
     [SerializeField] float cruiseSpeed = 8f;
     [SerializeField] float pursueSpeed = 12f;
     [SerializeField] float rotSpeed = 75f;
-    [SerializeField] float pursueRotSpeed = 135f;
     [SerializeField] float wallDistance = 10f;
     [SerializeField] float stopDistance = 4f;
-    bool isTriggered = false;
     //GameObject turret;
     LayerMask turnLayer;
-    LayerMask playerLayer;
     Rigidbody rb;
     GameObject player;
     void Start()
@@ -23,7 +20,6 @@ public class EnemyTankMovement : MonoBehaviour
         turnLayer = LayerMask.GetMask("Environment", "Tanks");
     //    turret = transform.Find("Turret").gameObject;
         player = GameObject.Find("PlayerTank");
-        playerLayer = LayerMask.GetMask("PlayerTank");
     }
     void Update()
     {
@@ -36,6 +32,7 @@ public class EnemyTankMovement : MonoBehaviour
         /////////////// Particle system?
         if (collision.collider.gameObject.CompareTag("Projectile")) {
             Destroy(gameObject);
+            Game.Instance.AssessEnemyCount();
         }
     }
 
@@ -46,7 +43,7 @@ public class EnemyTankMovement : MonoBehaviour
         //    Debug.Log("Trigger entered by player.\nStopping all coroutines and setting tracking state to 'Pursue'.");
             Physics.Raycast(transform.position, player.transform.position - transform.position, out RaycastHit hit); {
                 if (hit.transform.gameObject.layer == 8) {
-                    StopAllCoroutines();
+                    StopCoroutine("Turn");
                     state = EnemyState.Pursue;
                 }
             }
@@ -56,9 +53,8 @@ public class EnemyTankMovement : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        isTriggered = false;
         if (other.gameObject.layer == 8) {
-            StopAllCoroutines();
+            StopCoroutine("Turn");
         //    Debug.Log("Trigger exited by player.\nSetting tracking state to 'Patrol' and setting movement state to 'Cruise'.");
             state = EnemyState.Patrol;
             moveState = EnemyMoveState.Cruise;
@@ -91,10 +87,11 @@ public class EnemyTankMovement : MonoBehaviour
 
         Vector3 direction = (player.transform.position - transform.position).normalized;
 
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit)) {
+        if (Physics.Raycast(transform.position, direction, out RaycastHit hit))
+        {
             Debug.DrawRay(transform.position, direction * hit.distance, Color.red);
-            if (hit.collider.gameObject.layer != 8) {
+            if (hit.collider.gameObject.layer != 8)
+            {
                 Debug.Log("Player is not in line of sight. Switching to patrol mode.");
                 state = EnemyState.Patrol;
                 moveState = EnemyMoveState.Cruise;

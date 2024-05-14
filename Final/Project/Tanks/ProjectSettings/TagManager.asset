@@ -8,6 +8,8 @@ TagManager:
   - Turret
   - PlayerTurret
   - Projectile
+  - EnemyProjectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Tanks
   - PlayerProjectile
   - PlayerTank
-  - 
+  - EnemyProjectile
   - 
   - 
   - 

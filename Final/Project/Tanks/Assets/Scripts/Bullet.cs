@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerBullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float bulletSpeed = 10f;
@@ -12,13 +12,13 @@ public class PlayerBullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime);
+        transform.Translate(bulletSpeed * Time.deltaTime * Vector3.forward);
     }
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.collider.tag);
         Destroy(gameObject);
+        Debug.Log(other.collider.tag);
     }
     
 }

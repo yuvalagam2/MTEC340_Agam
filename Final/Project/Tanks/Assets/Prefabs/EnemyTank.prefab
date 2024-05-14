@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 6372949123899260857}
   m_Layer: 6
   m_Name: EnemyTank
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,12 +367,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5728df4ee4d5b4c959aac22276031ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   cruiseSpeed: 5
   pursueSpeed: 10
   rotSpeed: 75
   pursueRotSpeed: 135
   wallDistance: 10
-  stopDistance: 8
+  stopDistance: 14
 --- !u!54 &6726679849434826671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -410,7 +411,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -419,7 +420,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 16
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6176310240765315324
 GameObject:
@@ -430,6 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6964661482783010421}
+  - component: {fileID: 6966142210004676781}
   m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
@@ -455,6 +457,20 @@ Transform:
   - {fileID: 3351909522301310817}
   m_Father: {fileID: 9004780617667550719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6966142210004676781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176310240765315324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842b2a71e81c7417e9bbf8b57bef9eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3790042484215637497, guid: 3870d24ffe09942439afb3ab5c962d73, type: 3}
+  shootInterval: 1
 --- !u!1 &7654116488922054055
 GameObject:
   m_ObjectHideFlags: 0
